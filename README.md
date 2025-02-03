@@ -19,9 +19,8 @@
 Standard react Repository setup:
 1. This app is created using [create expo](https://docs.expo.dev/more/create-expo/#--template). 
     ```
-    bun create expo@latest grain-analyzer-app --template blank-typescript
+    bun create expo@latest grn-analyser-mobile --template blank-typescript
     ```
-
 
 2. Github actions workflow file with [Eslint setup](https://eslint.org/docs/latest/use/getting-started).
 
@@ -39,6 +38,8 @@ Standard react Repository setup:
 
 
 7. For creating documentation [Docz](https://www.docz.site/).
+
+8. Created Prebuild using [bun prebuild]
 
 ## 🏁 Requirements <a name = "requirements"></a>
 You’ll need to have [Node >= 22.11](https://nodejs.org/en/) and [bun >= 1.2](https://bun.sh/) on your machine.
@@ -108,7 +109,7 @@ You’ll need to have [Node >= 22.11](https://nodejs.org/en/) and [bun >= 1.2](h
 
 - created project with
 
-    bun create expo@latest grain-analyzer-app --template blank-typescript
+    bun create expo@latest grn-analyser-mobile --template blank-typescript
 
     bun add -D @types/jest
 

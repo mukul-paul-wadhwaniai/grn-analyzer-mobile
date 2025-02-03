@@ -7,17 +7,24 @@
     "esModuleInterop": true,
     "jsx": "react-native",
     "lib": ["es2023"],
-    "types": ["react-native", "jest"],
+    "types": ["jest"],
     "moduleResolution": "node",
     "noEmit": true,
     "target": "ESNext",
     "baseUrl": ".",
     "paths": {
+      "@assets/*": ["src/assets/*"],
       "@components/*": ["src/components/*"],
+      "@constants/*": ["src/constants/*"],
+      "@context/*": ["src/context/*"],
+      "@hooks/*": ["src/hooks/*"],
+      "@navigation/*": ["src/navigation/*"],
       "@screens/*": ["src/screens/*"],
-      "@utils/*": ["src/utils/*"],
-      "@hooks/*": ["src/hooks/*"]
-    }
+      "@storage/*": ["src/storage/*"],
+      "@styles/*": ["src/styles/*"],
+      "@utils/*": ["src/utils/*"]
+    },
+    "typeRoots": ["./src/types", "./node_modules/@types"]
   },
   "exclude": ["node_modules", ".vscode/*", "bun.lock", ".gitignore"]
 }

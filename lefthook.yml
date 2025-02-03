@@ -1,10 +1,11 @@
 pre-commit:
+  parallel: true
   commands:
     eslint:
-      run: bun eslint {staged_files}
       glob: '*.{js,ts,jsx,tsx}'
+      run: bun eslint {staged_files}
       # exclude:
 #         - config/application.rb
     prettier:
-      run: bun prettier --write {staged_files}
       glob: '*.{js,ts,jsx,tsx}'
+      run: bun prettier --write {staged_files}

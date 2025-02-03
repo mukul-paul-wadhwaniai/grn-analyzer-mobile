@@ -1,0 +1,24 @@
+{
+    "LANGUAGE_SELECTION": "भाषा चुनें",
+    "LOGIN_SCREEN": {
+        "TITLE": "ओटीपी के माध्यम से लॉगिन करें",
+        "MOBILE_NUMBER_LABEL": "मोबाइल नंबर दर्ज करें",
+        "GENERATE_OTP": "ओटीपी प्राप्त करें",
+        "VERIFY": "सत्यापित करें"
+    },
+    "HOME_SCREEN": {
+        "HEADER": "अनाज विश्लेषक",
+        "USER_GREET": {
+            "HI": "नमस्ते",
+            "WELCOME": "स्वागत है!"
+        },
+        "START_ASSESSMENT": {
+            "TITLE": "3 चरणों में अपने सोयाबीन की गुणवत्ता का विश्लेषण करें",
+            "UPLOAD_IMAGE": "छवि अपलोड करें",
+            "ASSESSMENT": "मूल्यांकन",
+            "RESULT": "परिणाम",
+            "CAPTURE_SOYABEAN_PHOTO": "सोयाबीन का फोटो कैप्चर करें",
+            "START_ASSESSMENT": "मूल्यांकन प्रारंभ करें"
+        }
+    }
+}

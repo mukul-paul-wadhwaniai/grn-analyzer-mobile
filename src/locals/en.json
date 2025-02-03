@@ -1,0 +1,24 @@
+{
+    "LANGUAGE_SELECTION": "Select Language",
+    "LOGIN_SCREEN": {
+        "TITLE": "Login using OTP",
+        "MOBILE_NUMBER_LABEL": "Enter mobile number",
+        "GENERATE_OTP": "Generate OTP",
+        "VERIFY": "Verify"
+    },
+    "HOME_SCREEN": {
+        "HEADER": "Grain Analyser",
+        "USER_GREET": {
+            "HI": "Hi",
+            "WELCOME": "Welcome!"
+        },
+        "START_ASSESSMENT": {
+            "TITLE": "Analyser your soyabean quality in 3 steps",
+            "UPLOAD_IMAGE": "Upload Image",
+            "ASSESSMENT": "Assessment",
+            "RESULT": "Result",
+            "CAPTURE_SOYABEAN_PHOTO": "Capture soyabean photo",
+            "START_ASSESSMENT": "Start Assessment"
+        }
+    }
+}
