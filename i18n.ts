@@ -7,7 +7,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export const initI18n = async () => {
   const storedLanguage = await AsyncStorage.getItem('language');
-  const defaultLanguage = storedLanguage || 'en';
+  const defaultLanguage = storedLanguage || 'hi';
   i18next.use(initReactI18next).init({
     resources: {
       en: { translation: en },
@@ -15,7 +15,7 @@ export const initI18n = async () => {
       mr: { translation: mr },
     },
     lng: defaultLanguage,
-    fallbackLng: 'en',
+    fallbackLng: 'hi',
     interpolation: {
       escapeValue: false,
     },

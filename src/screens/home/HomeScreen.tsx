@@ -1,10 +1,13 @@
-import { View, Text, Button } from 'react-native';
+import { StyleSheet, ScrollView } from 'react-native';
 import React, { useEffect } from 'react';
 import { useNavigation } from '@react-navigation/native';
 import { NavigationProp } from '@navigation/types';
 import Header from '@components/header/Header';
-import scannerIcon from '@assets/scanner.png';
+import scannerIcon from '@assets/images/scanner.png';
 import { useTranslation } from 'react-i18next';
+import Greetings from './components/Greetings';
+import StartAssessment from './components/StartAssessment';
+import { Margin } from '@styles/global';
 
 const HomeScreen = () => {
   const navigation = useNavigation<NavigationProp>();
@@ -26,23 +29,20 @@ const HomeScreen = () => {
   }, [navigation]);
 
   return (
-    <View>
-      <Button
-        onPress={() => navigation.navigate('Assessment')}
-        title="Go to Assessment"
-      />
-      <Text></Text>
-      <Button
-        onPress={() => navigation.navigate('Result')}
-        title="Go to Result"
-      />
-      <Text></Text>
-      <Button
-        onPress={() => navigation.navigate('Reports')}
-        title="Go to Reports"
-      />
-    </View>
+    <ScrollView style={styles.container}>
+      <Greetings />
+      <StartAssessment />
+    </ScrollView>
   );
 };
 
 export default HomeScreen;
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    flexDirection: 'column',
+    margin: Margin.screen,
+    marginBottom: 30,
+  },
+});

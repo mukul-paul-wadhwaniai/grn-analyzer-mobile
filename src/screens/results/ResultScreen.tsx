@@ -1,11 +1,12 @@
 import { View, Text } from 'react-native';
 import React, { useEffect } from 'react';
-import Header from '@components/header/Header';
 import { useNavigation } from '@react-navigation/native';
-import leftArrow from '@assets/arrow-left.png';
 import { NavigationProp } from '@navigation/types';
+import Header from '@components/header/Header';
+import closeIcon from '@assets/images/close.png';
+import { getFormatedDatetime } from '@utils/helper';
 
-const ReportsScreen = () => {
+const ResultScreen = () => {
   const navigation = useNavigation<NavigationProp>();
 
   const handleBackToHomeClick = () => {
@@ -17,8 +18,9 @@ const ReportsScreen = () => {
       header: () => (
         <Header
           header={{
-            title: 'Back to Home',
-            iconPrefix: leftArrow,
+            title: 'Result',
+            iconPrefix: closeIcon,
+            rightText: getFormatedDatetime(),
             leftHeaderClick: handleBackToHomeClick,
           }}>
           <Header.LeftHeader />
@@ -27,12 +29,11 @@ const ReportsScreen = () => {
       ),
     });
   }, [navigation]);
-
   return (
     <View>
-      <Text>ReportsScreen</Text>
+      <Text>ResultScreen</Text>
     </View>
   );
 };
 
-export default ReportsScreen;
+export default ResultScreen;

@@ -4,6 +4,7 @@ export const FontFamily = {
   poppinsMedium: 'Poppins-Medium',
   poppinsRegular: 'Poppins-Regular',
   interMedium: 'Inter-Medium',
+  groteskRegular: 'SpaceGrotesk-Regular',
 };
 /* Font Sizes */
 export const FontSize = {
@@ -13,7 +14,11 @@ export const FontSize = {
   size_base: 16,
   size_lg: 18,
   size_xl: 20,
+  sixe_2xl: 22,
   size_3xl: 24,
+  size_4xl: 26,
+  size_5xl: 30,
+  size_6xl: 36,
 };
 /* Colors */
 export const Color = {
@@ -42,8 +47,9 @@ export const Color = {
   tertiaryPink: '#FFE7E7',
   primaryGray: '#343434',
   secondaryGray: '#565656',
-  tertiaryGray: '#F4F4F4',
+  tertiaryGray: '#E7E7E7',
   colorGrayLite: '#909090',
+  bgGray: '#F5F5F5',
 };
 /* border radiuses */
 export const Border = {
@@ -52,6 +58,10 @@ export const Border = {
   br_9xs: 4,
   br_2xl: 21,
   br_xs: 12,
+};
+
+export const Margin = {
+  screen: 8,
 };
 
 export const RowContainer: StyleProp<ViewStyle> = {

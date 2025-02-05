@@ -1,11 +1,11 @@
-import { View, StyleSheet } from 'react-native';
+import { View, Text } from 'react-native';
 import React, { useEffect } from 'react';
-import { useNavigation } from '@react-navigation/native';
-import { NavigationProp } from '@navigation/types';
 import Header from '@components/header/Header';
-import leftArrow from '@assets/arrow-left.png';
+import { useNavigation } from '@react-navigation/native';
+import leftArrow from '@assets/images/arrow-left.png';
+import { NavigationProp } from '@navigation/types';
 
-const AssessmentScreen = () => {
+const ReportsScreen = () => {
   const navigation = useNavigation<NavigationProp>();
 
   const handleBackToHomeClick = () => {
@@ -28,15 +28,11 @@ const AssessmentScreen = () => {
     });
   }, [navigation]);
 
-  return <View style={styles.container}></View>;
+  return (
+    <View>
+      <Text>ReportsScreen</Text>
+    </View>
+  );
 };
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-});
-
-export default AssessmentScreen;
+export default ReportsScreen;

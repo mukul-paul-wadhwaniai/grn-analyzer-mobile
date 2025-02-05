@@ -1,7 +1,7 @@
+import TextBox from '@components/text/TextBox';
 import { Color, FontSize } from '@styles/global';
 import {
   TouchableOpacity,
-  Text,
   StyleSheet,
   type ImageSourcePropType,
   Image,
@@ -17,7 +17,6 @@ interface ButtonProps {
   iconPrefix?: ImageSourcePropType;
   iconSuffix?: ImageSourcePropType;
   iconStyle?: object;
-  isFontScalabe?: boolean;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -29,26 +28,17 @@ const Button: React.FC<ButtonProps> = ({
   iconPrefix,
   iconSuffix,
   iconStyle,
-  isFontScalabe = true,
 }: ButtonProps) => {
   return (
     <TouchableOpacity
       style={[styles.button, style, disabled && styles.disabledButton]}
       onPress={disabled ? undefined : onClick}>
       {iconPrefix && (
-        <Image
-          source={iconPrefix}
-          style={[styles.icon, styles.iconPrefix, iconStyle]}
-        />
+        <Image source={iconPrefix} style={[styles.icon, iconStyle]} />
       )}
-      <Text style={[styles.text, labelStyle]} allowFontScaling={isFontScalabe}>
-        {title}
-      </Text>
+      <TextBox text={title} style={[styles.text, labelStyle]} />
       {iconSuffix && (
-        <Image
-          source={iconSuffix}
-          style={[styles.icon, styles.iconSuffix, iconStyle]}
-        />
+        <Image source={iconSuffix} style={[styles.icon, iconStyle]} />
       )}
     </TouchableOpacity>
   );
@@ -60,6 +50,9 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
+    borderRadius: 8,
+    paddingVertical: 10,
+    paddingHorizontal: 10,
   },
   disabledButton: {
     backgroundColor: 'grey',
@@ -68,18 +61,12 @@ const styles = StyleSheet.create({
     color: '#FFFFFF',
     textAlign: 'center',
     fontWeight: '500',
-    fontSize: FontSize.size_sm,
+    fontSize: FontSize.size_base,
   } as TextStyle,
   icon: {
     width: 12,
     height: 12,
     objectFit: 'contain',
-  },
-  iconPrefix: {
-    marginRight: 10,
-  },
-  iconSuffix: {
-    marginLeft: 10,
   },
 });
 

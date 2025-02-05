@@ -1,11 +1,11 @@
 export const SupportedLanguages = {
   hi: {
     key: 'हि',
-    value: 'Hindi',
+    value: 'हिंदी',
   },
   mr: {
     key: 'म',
-    value: 'Marathi',
+    value: 'मराठी',
   },
   en: {
     key: 'En',

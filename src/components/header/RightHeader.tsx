@@ -1,8 +1,9 @@
-import { View, Text, StyleSheet } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 import React from 'react';
 import { useHeaderContext } from './Header';
 import Button from '@components/button/Button';
 import { Color, FontSize } from '@styles/global';
+import TextBox from '@components/text/TextBox';
 
 const RightHeader = () => {
   const { header } = useHeaderContext();
@@ -15,7 +16,9 @@ const RightHeader = () => {
         disabled={header.rightDisabled}
         onClick={header.rightHeaderClick}
       />
-      {header.rightText && <Text style={styles.text}>{header.rightText}</Text>}
+      {header.rightText && (
+        <TextBox style={styles.text} text={header.rightText}></TextBox>
+      )}
     </View>
   );
 };
@@ -33,7 +36,7 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: FontSize.size_sm,
-    color: Color.primaryGray,
+    color: Color.secondaryGray,
     backgroundColor: Color.tertiaryGray,
     paddingHorizontal: 10,
     paddingVertical: 5,

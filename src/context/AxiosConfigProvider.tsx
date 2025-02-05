@@ -18,6 +18,7 @@ export const AxiosConfigProvider = ({
       'Accept-Language': 'en',
       Authorization: `Bearer ${config.bearer}`,
       'Content-Type': 'application/json',
+      'X-Language': 'en',
     },
     maxBodyLength: Infinity,
   });

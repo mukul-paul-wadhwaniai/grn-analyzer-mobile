@@ -1,11 +1,11 @@
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
-import HomeScreen from '@screens/HomeScreen';
-import AssessmentScreen from '@screens/AssessmentScreen';
-import ResultScreen from '@screens/ResultScreen';
-import ReportsScreen from '@screens/ReportsScreen';
-import LanguageSelectionScreen from '@screens/LanguageSelectionScreen';
-import LoginScreen from '@screens/LoginScreen';
+import HomeScreen from '@screens/home/HomeScreen';
+import AssessmentScreen from '@screens/assessment/AssessmentScreen';
+import ResultScreen from '@screens/results/ResultScreen';
+import ReportsScreen from '@screens/reports/ReportsScreen';
+import LanguageSelectionScreen from '@screens/languageSelection/LanguageSelectionScreen';
+import LoginScreen from '@screens/login/LoginScreen';
 import { StatusBar, StyleSheet } from 'react-native';
 import { Color } from '@styles/global';
 

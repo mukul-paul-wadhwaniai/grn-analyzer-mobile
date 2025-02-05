@@ -1,8 +1,9 @@
-import { View, Text, StyleSheet } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 import React from 'react';
 import { useHeaderContext } from './Header';
 import Button from '@components/button/Button';
 import { Color, FontSize } from '@styles/global';
+import TextBox from '@components/text/TextBox';
 
 const LeftHeader = () => {
   const { header } = useHeaderContext();
@@ -15,7 +16,9 @@ const LeftHeader = () => {
         disabled={header.leftDisabled}
         onClick={header.leftHeaderClick}
       />
-      {header.title && <Text style={styles.text}>{header.title}</Text>}
+      {header.title && (
+        <TextBox style={styles.text} text={header.title}></TextBox>
+      )}
     </View>
   );
 };

@@ -247,4 +247,11 @@ You’ll need to have [Node >= 22.11](https://nodejs.org/en/) and [bun >= 1.2](h
                 glob: '*.{js,ts,jsx,tsx}'
 
 
+
+- How to set Fonts
+    install expo-fonts
+    download required font file .otf
+    list all the fonts path in app.json plugins
+    use usefonts hook 
+    use fonts
 ```
