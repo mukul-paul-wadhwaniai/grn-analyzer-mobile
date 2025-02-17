@@ -16,23 +16,17 @@ const StartButtonCover = () => {
   const navigation = useNavigation<NavigationProp>();
 
   return (
-    <Wrapper
-      components={{
-        section1: (
-          <React.Fragment>
-            <View style={styles.imageContainer}>
-              <Image src={imageIcon} style={styles.startAssessmentImage} />
-            </View>
-            <Button
-              title={t('HOME_SCREEN.START_ASSESSMENT.START_ASSESSMENT')}
-              style={{ width: '100%' }}
-              onClick={() => navigation.navigate('Assessment')}
-            />
-          </React.Fragment>
-        ),
-        style: [styles.startAssessmentCover],
-      }}>
-      <Wrapper.Section1 />
+    <Wrapper style={styles.startAssessmentCover}>
+      <>
+        <View style={styles.imageContainer}>
+          <Image src={imageIcon} style={styles.startAssessmentImage} />
+        </View>
+        <Button
+          title={t('HOME_SCREEN.START_ASSESSMENT.START_ASSESSMENT')}
+          style={{ width: '100%' }}
+          onClick={() => navigation.navigate('Assessment')}
+        />
+      </>
     </Wrapper>
   );
 };
@@ -40,21 +34,15 @@ const StartButtonCover = () => {
 const StartAssessment = () => {
   const { t } = useTranslation();
   return (
-    <Wrapper
-      components={{
-        section1: (
-          <React.Fragment>
-            <TextBox
-              text={t('HOME_SCREEN.START_ASSESSMENT.TITLE')}
-              style={[styles.title]}
-            />
-            <AssessmentProgressStep />
-            <StartButtonCover />
-          </React.Fragment>
-        ),
-        style: styles.flex1,
-      }}>
-      <Wrapper.Section1 />
+    <Wrapper style={styles.flex1}>
+      <>
+        <TextBox
+          text={t('HOME_SCREEN.START_ASSESSMENT.TITLE')}
+          style={[styles.title]}
+        />
+        <AssessmentProgressStep />
+        <StartButtonCover />
+      </>
     </Wrapper>
   );
 };
@@ -76,7 +64,7 @@ const styles = StyleSheet.create({
     backgroundColor: Color.colorWhite,
   },
   imageContainer: {
-    height: 400,
+    height: 300,
     justifyContent: 'center',
     alignItems: 'center',
   },

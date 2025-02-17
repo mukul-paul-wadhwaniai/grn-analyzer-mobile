@@ -6,8 +6,9 @@ import ResultScreen from '@screens/results/ResultScreen';
 import ReportsScreen from '@screens/reports/ReportsScreen';
 import LanguageSelectionScreen from '@screens/languageSelection/LanguageSelectionScreen';
 import LoginScreen from '@screens/login/LoginScreen';
-import { StatusBar, StyleSheet } from 'react-native';
+import { StyleSheet } from 'react-native';
 import { Color } from '@styles/global';
+import RegistrationScreen from '@screens/registration/RegistrationScreen';
 
 const Stack = createStackNavigator();
 
@@ -33,8 +34,21 @@ const AppNavigator: React.FC = () => {
             headerShown: false,
           }}
         />
+        <Stack.Screen
+          name="Registration"
+          component={RegistrationScreen}
+          options={{
+            headerShown: false,
+          }}
+        />
         <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="Assessment" component={AssessmentScreen} />
+        <Stack.Screen
+          name="Assessment"
+          component={AssessmentScreen}
+          options={{
+            headerShown: false,
+          }}
+        />
         <Stack.Screen name="Result" component={ResultScreen} />
         <Stack.Screen name="Reports" component={ReportsScreen} />
       </Stack.Navigator>
@@ -47,6 +61,5 @@ export default AppNavigator;
 const styles = StyleSheet.create({
   screenOptions: {
     backgroundColor: Color.colorWhite,
-    paddingTop: StatusBar.currentHeight || 0,
   },
 });

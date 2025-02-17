@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { AxiosConfigContext } from './AxiosConfigContext';
-import { ReactNode } from 'react';
+import { ReactNode, useCallback, useMemo, useState } from 'react';
 import { QueryConfig } from '../types';
 
 interface AxiosConfigProviderProps {
@@ -8,25 +8,38 @@ interface AxiosConfigProviderProps {
   config: QueryConfig;
 }
 
-export const AxiosConfigProvider = ({
-  children,
-  config,
-}: AxiosConfigProviderProps) => {
+export const AxiosConfigProvider = ({ children }: AxiosConfigProviderProps) => {
+  const [jwtToken, setJwtTokenState] = useState('');
+  const [language, setLanguageState] = useState('hi');
+
+  const jwtTokenMemo = useMemo(() => jwtToken, [jwtToken]);
+  const languageMemo = useMemo(() => language, [language]);
+
+  const setJwtToken = useCallback((token: string) => {
+    setJwtTokenState(token);
+  }, []);
+
+  const setLanguage = useCallback((lang: string) => {
+    setLanguageState(lang);
+  }, []);
+
   const axiosInstance = axios.create({
-    baseURL: config.baseURL,
+    baseURL: process.env.EXPO_PUBLIC_API_ENDPOINT_SERVER,
     headers: {
       'Accept-Language': 'en',
-      Authorization: `Bearer ${config.bearer}`,
+      Authorization: `Bearer ${jwtToken}`,
       'Content-Type': 'application/json',
-      'X-Language': 'en',
+      'X-App-Lang': language,
     },
     maxBodyLength: Infinity,
   });
 
   const providerValue = {
     axiosInstance,
-    angwId: config.angwId,
-    apiEndpointTail: config.apiEndpointTail,
+    language: languageMemo,
+    jwtToken: jwtTokenMemo,
+    setLanguage,
+    setJwtToken,
   };
 
   return (

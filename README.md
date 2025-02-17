@@ -255,3 +255,13 @@ You’ll need to have [Node >= 22.11](https://nodejs.org/en/) and [bun >= 1.2](h
     use usefonts hook 
     use fonts
 ```
+
+
+- To use localhost api 
+    follow this 5th point https://stackoverflow.com/questions/33704130/react-native-android-fetch-failing-on-connection-to-local-api
+
+    install https://ngrok.com/downloads/mac-os
+
+    run -> ngrok http http://localhost:8082
+    use the forwarding as api
+    

@@ -1,16 +1,22 @@
 import type { AxiosInstance } from 'axios';
 import { createContext, useContext } from 'react';
 
-interface AxiosConfigContextProps {
+export type AxiosConfigContextProps = {
   axiosInstance: AxiosInstance;
-  angwId: string;
-  apiEndpointTail?: string;
-}
+  language: string;
+  jwtToken: string;
+  setLanguage: (lang: string) => void;
+  setJwtToken: (token: string) => void;
+};
 
 export const AxiosConfigContext = createContext<
   AxiosConfigContextProps | undefined
 >(undefined);
 
 export const useAxios = () => {
-  return useContext(AxiosConfigContext);
+  const context = useContext(AxiosConfigContext);
+  if (!context) {
+    throw new Error('useAxios must be used within an AxiosConfigProvider');
+  }
+  return context;
 };

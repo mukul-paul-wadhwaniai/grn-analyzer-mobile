@@ -21,6 +21,7 @@ export default [
     rules: {
       'no-undef': 'off',
       'react/display-name': 'off',
+      '@typescript-eslint/no-explicit-any': 'off',
       '@typescript-eslint/no-require-imports': 'off',
       'react/react-in-jsx-scope': 'off',
       'no-shadow': ['error'],

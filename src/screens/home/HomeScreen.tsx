@@ -18,7 +18,7 @@ const HomeScreen = () => {
       header: () => (
         <Header
           header={{
-            title: t('HOME_SCREEN.HEADER'),
+            title: t('HEADER.HOME'),
             iconPrefix: scannerIcon,
           }}>
           <Header.LeftHeader />

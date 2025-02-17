@@ -50,21 +50,29 @@ const AssessmentProgressStep: React.FC<AssessmentProgressStepProps> = ({
       {steps.map((step, index) => (
         <React.Fragment key={step.id}>
           {index !== 0 && <View style={styles.dashedLine} />}
-
           <View style={styles.stepContainer}>
-            <View
-              style={[
-                styles.stepCircle,
-                currentStep === step.id && styles.activeStep,
-              ]}>
-              <Image
-                source={step.image}
+            <View style={styles.rowCenterContainer}>
+              <TextBox
+                text={(index + 1).toString()}
                 style={[
-                  styles.stepImage,
-                  currentStep === step.id && styles.activeImage,
+                  styles.stepIndex,
+                  currentStep >= step.id && styles.activeStepIndex,
                 ]}
-                resizeMode="contain"
               />
+              <View
+                style={[
+                  styles.stepCircle,
+                  currentStep >= step.id && styles.activeStep,
+                ]}>
+                <Image
+                  source={step.image}
+                  style={[
+                    styles.stepImage,
+                    currentStep >= step.id && styles.activeImage,
+                  ]}
+                  resizeMode="contain"
+                />
+              </View>
             </View>
             <TextBox text={t(step.label)} style={styles.stepLabel}></TextBox>
           </View>
@@ -80,6 +88,20 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     paddingVertical: 15,
+    backgroundColor: 'transparent',
+  },
+  rowCenterContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    columnGap: 8,
+  },
+  stepIndex: {
+    fontSize: FontSize.size_lg,
+    color: Color.colorGrayLite,
+  },
+  activeStepIndex: {
+    fontSize: FontSize.size_3xl,
+    color: Color.secondaryGray,
   },
   stepContainer: {
     alignItems: 'center',
@@ -98,12 +120,14 @@ const styles = StyleSheet.create({
     borderColor: Color.primaryGray,
   },
   stepImage: {
-    width: 25,
-    height: 25,
+    width: 20,
+    height: 20,
     tintColor: Color.colorGray_50,
   },
   activeImage: {
     tintColor: Color.primaryGray,
+    width: 30,
+    height: 30,
   },
   stepLabel: {
     marginTop: 6,
@@ -112,7 +136,6 @@ const styles = StyleSheet.create({
   },
   dashedLine: {
     width: 35,
-    // height: 1,
     borderStyle: 'dashed',
     borderWidth: 1,
     borderColor: Color.colorGrayLite,

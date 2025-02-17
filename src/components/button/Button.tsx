@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     borderRadius: 8,
     paddingVertical: 10,
-    paddingHorizontal: 10,
+    paddingHorizontal: 5,
   },
   disabledButton: {
     backgroundColor: 'grey',

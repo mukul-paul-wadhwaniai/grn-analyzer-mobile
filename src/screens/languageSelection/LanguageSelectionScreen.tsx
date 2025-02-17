@@ -10,6 +10,7 @@ import { i18next } from '../../../i18n';
 import { useTranslation } from 'react-i18next';
 import TextBox from '@components/text/TextBox';
 import { getSelectedLanguage } from '@utils/helper';
+import { useAxios } from '@context/AxiosConfigContext';
 
 type LanguageKey = keyof typeof SupportedLanguages;
 
@@ -17,11 +18,13 @@ const LanguageSelectionScreen = () => {
   const [selectedLanguage, setSelectedLanguage] = useState<string | null>(null);
   const navigation = useNavigation<NavigationProp>();
   const { t } = useTranslation();
+  const { setLanguage } = useAxios();
 
   const handleLanguageSelection = async (selectedLanguageVal: LanguageKey) => {
     navigation.replace('Login');
     await AsyncStorage.setItem('language', selectedLanguageVal);
     i18next.changeLanguage(selectedLanguageVal);
+    setLanguage(selectedLanguageVal);
   };
 
   useEffect(() => {

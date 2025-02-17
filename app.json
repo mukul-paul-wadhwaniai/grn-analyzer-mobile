@@ -4,11 +4,11 @@
     "slug": "grn-analyser-mobile",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/home.png",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
     "splash": {
-      "image": "./assets/splash-icon.png",
+      "image": "./assets/home.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -18,19 +18,27 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/home.png",
         "backgroundColor": "#ffffff"
       },
       "package": "com.anonymous.grainanalyzerapp"
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/home.png"
     },
     "plugins": [
       [
         "expo-font",
         {
-          "fonts": ["./assets/fonts/space-grotesk/SpaceGrotesk-Regular"]
+          "fonts": ["./src/assets/fonts/space-grotesk/SpaceGrotesk-Regular.otf"]
+        }
+      ],
+      [
+        "react-native-vision-camera",
+        {
+          "cameraPermissionText": "$(PRODUCT_NAME) needs access to your Camera.",
+          "enableMicrophonePermission": true,
+          "microphonePermissionText": "$(PRODUCT_NAME) needs access to your Microphone."
         }
       ]
     ]

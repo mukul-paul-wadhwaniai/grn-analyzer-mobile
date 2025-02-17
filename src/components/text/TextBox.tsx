@@ -8,7 +8,11 @@ interface TextBoxProps {
 }
 
 const TextBox: React.FC<TextBoxProps> = ({ text, style }: TextBoxProps) => {
-  return <Text style={[styles.text, style]}>{text}</Text>;
+  return (
+    <Text style={[styles.text, style]} numberOfLines={4} ellipsizeMode="tail">
+      {text}
+    </Text>
+  );
 };
 
 const styles = StyleSheet.create({

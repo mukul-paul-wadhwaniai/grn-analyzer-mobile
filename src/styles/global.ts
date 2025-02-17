@@ -14,7 +14,7 @@ export const FontSize = {
   size_base: 16,
   size_lg: 18,
   size_xl: 20,
-  sixe_2xl: 22,
+  size_2xl: 22,
   size_3xl: 24,
   size_4xl: 26,
   size_5xl: 30,
