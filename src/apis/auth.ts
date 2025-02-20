@@ -49,3 +49,30 @@ export const registerApi = async (axiosInstance: AxiosInstance) => {
     throw apiError;
   }
 };
+
+// export const firebaseAuthApi = async (axiosInstance: AxiosInstance, mobileNumber: string) => {
+//     return await apiRequestHandler(async () => {
+//       const response = await axiosInstance.post('/firebase/auth', {
+//         params: { mobile_number: mobileNumber }
+//       });
+//       return response.data;
+//     });
+//   };
+
+//   export const loginApi = async (axiosInstance: AxiosInstance, mobileNumber: string, firebaseToken: string) => {
+//     return await apiRequestHandler(async () => {
+//       console.log('baseurl: ', axiosInstance.defaults.baseURL);
+//       const response = await axiosInstance.post('/user/login', null, {
+//         params: { mobile_number: mobileNumber, firebase_token: firebaseToken }
+//       });
+//       console.log('loginApi response: ', response?.data);
+//       return response.data;
+//     });
+//   };
+
+//   export const registerApi = async (axiosInstance: AxiosInstance) => {
+//     return await apiRequestHandler(async () => {
+//       const response = await axiosInstance.post('/user/register');
+//       return response.data;
+//     });
+//   };

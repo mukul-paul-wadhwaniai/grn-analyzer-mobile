@@ -265,3 +265,33 @@ You’ll need to have [Node >= 22.11](https://nodejs.org/en/) and [bun >= 1.2](h
     run -> ngrok http http://localhost:8082
     use the forwarding as api
     
+
+- Set App Icon/splash screen (https://www.youtube.com/watch?v=_hgsAlPTGXY)
+    App Icon in Android
+        1. visit https://icon.kitchen/ and design icon
+        2. replace all mipmap files (except mipmap-anydpi-v26) from android/app/res/main/res dir
+        3. remove  android:roundIcon="@mipmap/ic_launcher_round" from android/app/res/main/AndroidManifest.xml file
+        start the application, app icon will be set
+
+    Splash screen
+        4. visit https://apetools.webprofusion.com/ and generate splash screen
+        5. follow the steps https://github.com/crazycodeboy/react-native-splash-screen
+
+         
+    App Icon in IOS
+        Getting some error on ios
+
+
+
+- If error encounters in next day after leaving running app
+    cd android
+    ./gradlew clean
+    ./gradlew assembleDebug
+    
+    even error exists
+    ./gradlew installDebug
+    rm -rf ~/.gradle/caches
+    rm -rf android/.gradle
+    rm -rf android/app/build
+    ./gradlew clean
+    rm -rf app/build/outputs/apk/debug/app-debug.apk

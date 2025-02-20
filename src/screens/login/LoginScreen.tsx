@@ -29,7 +29,7 @@ const LanguageSelectionScreen = () => {
   };
 
   const handleLogin = async () => {
-    if (mobileNumber?.length >= 4 && otp?.length === 6) {
+    if (mobileNumber?.length >= 2 && otp?.length === 6) {
       const response = await login(mobileNumber, 'otp');
       if (response?.jwt_token) {
         setJwtToken(response?.jwt_token);
