@@ -1,0 +1,63 @@
+{
+    "HEADER": {
+        "HOME": "Grain Analyser",
+        "BACK_TO_HOME": "Back to Home",
+        "RESULT": "Result"
+    },
+    "LANGUAGE_SELECTION": "Select Language",
+    "LOGIN_SCREEN": {
+        "TITLE": "Login using OTP",
+        "MOBILE_NUMBER_LABEL": "Enter mobile number",
+        "GENERATE_OTP": "Generate OTP",
+        "VERIFY": "Verify"
+    },
+    "HOME_SCREEN": {
+        "USER_GREET": {
+            "HI": "Hi",
+            "WELCOME": "Welcome!"
+        },
+        "START_ASSESSMENT": {
+            "TITLE": "Analyser your soyabean quality in 3 steps",
+            "UPLOAD_IMAGE": "Upload Image",
+            "ASSESSMENT": "Assessment",
+            "RESULT": "Result",
+            "CAPTURE_SOYABEAN_PHOTO": "Capture soyabean photo",
+            "START_ASSESSMENT": "Start Assessment"
+        }
+    },
+    "ASSESSMENT_SCREEN": {
+        "TUTORIAL": {
+            "TITLE": "Learn How to take pictures",
+            "STEP1": "Use a reference object (₹50 or ₹100 note).",
+            "STEP2": "Ensure proper lighting and avoid blurry images.",
+            "STEP3": "Spread grains evenly.",
+            "GET_STARTED": "Get Started"
+        },
+        "BASE_PRICE": {
+            "TITLE": "Kindly provide today’s soybean price (per quintal) in your area.",
+            "ENTER_PRICE": "Enter price ( eg. ₹4,500)",
+            "DONE": "Done"
+        },
+        "CAPTURE_IMAGE": {
+            "TAKE_IMAGE": "Take Image",
+            "IMAGE": "Image",
+            "RETAKE": "Retake",
+            "UPLOAD": "Upload"
+        },
+        "ASSESSMENT": {
+            "UPLOAD_IMAGES": "Upload Images",
+            "UPLOAD_IMAGES_HEADING": "You can upload up to 3 images, but you can start your assessment with just 1 image uploaded.",
+            "UPLOADING": "Uploading...",
+            "VALIDATING": "Validating...",
+            "SUCCESSFUL": "Successful",
+            "UPLOAD_FAILED": "Upload Failed",
+            "VALIDATION_FAILED": "Validation Failed",
+            "REJECTED": "Rejected",
+            "RETAKE_IMAGE": "Retake Image",
+            "RETAKE": "Retake",
+            "RETRY": "Retry",
+            "DELETE_RETAKE": "Delete all images and Retake",
+            "ANALYSE_BUTTON": "Analyse your Product"
+        }
+    }
+}

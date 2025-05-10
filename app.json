@@ -1,28 +1,46 @@
 {
   "expo": {
-    "name": "grain-analyzer-app",
-    "slug": "grain-analyzer-app",
+    "name": "grn-analyser-mobile",
+    "slug": "grn-analyser-mobile",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/home.png",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
     "splash": {
-      "image": "./assets/splash-icon.png",
+      "image": "./assets/app-icon.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.anonymous.grainanalyzerapp"
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/home.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.anonymous.grainanalyzerapp"
     },
     "web": {
-      "favicon": "./assets/favicon.png"
-    }
+      "favicon": "./assets/home.png"
+    },
+    "plugins": [
+      [
+        "expo-font",
+        {
+          "fonts": ["./src/assets/fonts/space-grotesk/SpaceGrotesk-Regular.otf"]
+        }
+      ],
+      [
+        "react-native-vision-camera",
+        {
+          "cameraPermissionText": "$(PRODUCT_NAME) needs access to your Camera.",
+          "enableMicrophonePermission": true,
+          "microphonePermissionText": "$(PRODUCT_NAME) needs access to your Microphone."
+        }
+      ]
+    ]
   }
 }
